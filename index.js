@@ -13,16 +13,18 @@
   };
   let encoder = new AudioEncoder(encoder_init);
   let config = {
-    codec: 'aac',
+    codec: 'opus',
     sampleRate: sample_rate,
     numberOfChannels: 2,
     bitrate: 256000,  // 256kbit
   };
   encoder.configure(config);
-
+  let config_supported = await AudioEncoder.isConfigSupported(config);
+        console.log(config_supported);
+        debugger;
   let timestamp_us = 0;
   const data_duration_s = total_duration_s / data_count;
-  const frames = data_duration_s * config.sampleRate;
+ const frames = Math.max(1, Math.round(data_duration_s * config.sampleRate));
   for (let i = 0; i < data_count; i++) {
     let buffer = new Float32Array(frames * config.numberOfChannels);
     let data = new AudioData({
@@ -45,12 +47,12 @@
 let output_data = new Uint8Array(a[0].byteLength);
   a[0].copyTo(output_data);
 
- const audioBlob = new Blob([output_data], { type: 'audio/aac' });
+ const audioBlob = new Blob([output_data], { type: 'audio/opus' });
     // Create a download link for the WAV file
     const downloadLink = document.createElement('a');
     downloadLink.href = URL.createObjectURL(audioBlob);
-    downloadLink.download = 'sound.aac';
-    downloadLink.innerHTML = 'Download AAC';
+    downloadLink.download = 'sound.opus';
+    downloadLink.innerHTML = 'Download opus';
 
     // Append the download link to the document body
     document.body.appendChild(downloadLink);
