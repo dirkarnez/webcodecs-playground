@@ -8,5 +8,12 @@ webcodecs-playground
 - [guest271314/WebCodecsOpusRecorder: WebCodecs Opus Recorder/Media Source Extensions Opus EncodedAudioChunk Player](https://github.com/guest271314/WebCodecsOpusRecorder)
 - [everywill/AudioEncoder: AudioEncoder of WebCodec polyfill with fdkaac and Webassembly](https://github.com/everywill/AudioEncoder)
 - [eagle19243/AudioEncoder](https://github.com/eagle19243/AudioEncoder)
+- [Vanilagy/webm-muxer: WebM multiplexer in pure TypeScript with support for WebCodecs API, video & audio.](https://github.com/Vanilagy/webm-muxer)
+[Vanilagy/mp4-muxer at b295e920d776a3a44cc8a12771f0a3f7a0aed468](https://github.com/Vanilagy/mp4-muxer/tree/b295e920d776a3a44cc8a12771f0a3f7a0aed468)
+[gpac/gpac at 334d8f83207aee22a729c0b72cda455271d9976f](https://github.com/gpac/gpac/tree/334d8f83207aee22a729c0b72cda455271d9976f)
+[guest271314/webcodecs at dfb21ee3bcd3c41d573f899e98eeebef62e6e552](https://github.com/guest271314/webcodecs/tree/dfb21ee3bcd3c41d573f899e98eeebef62e6e552)
+[w3c/webcodecs at 21e4a1502ed53553495c099c828592b819d5dc6c](https://github.com/w3c/webcodecs/tree/21e4a1502ed53553495c099c828592b819d5dc6c)
+[anthumchris/opus-stream-decoder: Instantly decode Ogg Opus audio streams in chunks with JavaScript & WebAssembly (Wasm)](https://github.com/anthumchris/opus-stream-decoder)
+[gpac/mp4box.js: JavaScript version of GPAC's MP4Box tool](https://github.com/gpac/mp4box.js/)
 ### TODOs
 - [ ] opus file should be written by appending an empty file in `AudioEncoder`'s `output` callback
