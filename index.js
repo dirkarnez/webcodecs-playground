@@ -13,7 +13,7 @@
   };
   let encoder = new AudioEncoder(encoder_init);
   let config = {
-    codec: 'opus',
+    codec: 'aac',
     sampleRate: sample_rate,
     numberOfChannels: 2,
     bitrate: 256000,  // 256kbit
@@ -45,18 +45,15 @@
 let output_data = new Uint8Array(a[0].byteLength);
   a[0].copyTo(output_data);
 
-
-
- const audioBlob = new Blob([output_data], { type: 'audio/webm;codecs=opus' });
-debugger;
+ const audioBlob = new Blob([output_data], { type: 'audio/aac' });
     // Create a download link for the WAV file
     const downloadLink = document.createElement('a');
     downloadLink.href = URL.createObjectURL(audioBlob);
-    downloadLink.download = 'sound.wav';
-    downloadLink.innerHTML = 'Download WAV';
+    downloadLink.download = 'sound.aac';
+    downloadLink.innerHTML = 'Download AAC';
 
     // Append the download link to the document body
     document.body.appendChild(downloadLink);
 downloadLink.click();
 
-})()
+})();
