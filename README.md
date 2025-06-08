@@ -16,6 +16,7 @@ webcodecs-playground
 - [anthumchris/opus-stream-decoder: Instantly decode Ogg Opus audio streams in chunks with JavaScript & WebAssembly (Wasm)](https://github.com/anthumchris/opus-stream-decoder)
 - https://github.com/jiyeyuran/aac-encoder.js
 - [gpac/mp4box.js: JavaScript version of GPAC's MP4Box tool](https://github.com/gpac/mp4box.js/)
+- [remotion/packages/webcodecs/src/create-audio-decoder.ts at 4af8e6238b9f471b56c4abef235f7bca0712c371 · remotion-dev/remotion](https://github.com/remotion-dev/remotion/blob/4af8e6238b9f471b56c4abef235f7bca0712c371/packages/webcodecs/src/create-audio-decoder.ts#L8)
 ### TODOs
 - [ ] opus file should be written by appending an empty file in `AudioEncoder`'s `output` callback
 - [ ] ```js
